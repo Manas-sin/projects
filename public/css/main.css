@@ -4041,9 +4041,9 @@ textarea:focus::placeholder {
   height: 250px;
   position: relative;
   overflow: hidden;
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .loader_line:before {
@@ -4906,4 +4906,37 @@ textarea:focus::placeholder {
 }
 .dark-theme {
     background: #1a1a1a;
+}
+
+/* Head.css */
+body.dark-theme {
+  background-color: #000000;
+  color: #e0e0e0;
+}
+
+body.dark-theme .bostami-header-area {
+  background-color: #000000;
+}
+
+/* Background image paths */
+.page-wrapper {
+  background-image: url('/img/bg/page-bg-1.jpg'); /* Correct path */
+}
+
+.page-wrapper.dark-theme {
+  background-image: url('/img/bg/page-bg-dark-2.jpg'); /* Correct path */
+}
+
+.page-wrapper-2 {
+  background-image: url('/img/bg/page-bg-1.jpg'); /* Correct path */
+}
+
+.page-wrapper-2.dark-theme {
+  background-image: url('/img/bg/page-bg-dark-2.jpg'); /* Correct path */
+}
+
+/* Additional dark theme styles */
+.dark-theme {
+  background-color: #000000; /* example for dark background */
+  color: #f1f1f1; /* example for text color */
 }

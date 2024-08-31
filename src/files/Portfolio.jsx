@@ -1,7 +1,7 @@
 import React from "react";
-import Head from "../component/head";
+import Head from "../component/Head";
 import Leftsidebar from "../component/leftsidebar";
-import Rightsidebar from "../component/rightsidebar";
+import Rightsidebar from "../component/Rightsidebar";
 import App from "../App";
 import Heads from "../component/Heads";
 import Bootom from "../component/Bootom";
@@ -233,15 +233,8 @@ function portfolio() {
                   {/* footer copyright */}
                   <div className="footer-copyright text-center bg-light-white-2 pt-25 pb-25">
                     <span>
-                      © 2024 All Rights Reserved by{" "}
-                      <a
-                        href="https://themeforest.net/user/elite-themes24"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        elite-themes24
-                      </a>
-                      .
+                      © 2024 All Rights Reserved by Manas Singh
+                      <a target="_blank" rel="noopener noreferrer" href="#"></a>
                     </span>
                   </div>
                 </div>
@@ -252,8 +245,8 @@ function portfolio() {
             </div>
           </div>
         </div>
-        <Bootom />
-      </div>
+      </div>{" "}
+      <Bootom />
     </React.Fragment>
   );
 }

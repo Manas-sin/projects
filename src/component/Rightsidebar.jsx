@@ -1,7 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import PersonPinCircleSharpIcon from "@mui/icons-material/PersonPinCircleSharp";
+import AssignmentIndSharpIcon from "@mui/icons-material/AssignmentIndSharp";
+import EmojiEmotionsSharpIcon from "@mui/icons-material/EmojiEmotionsSharp";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import { useTheme } from "@mui/material/styles";
 
 function Rightsidebar() {
+  const theme = useTheme();
   return (
     <>
       {/* main-menu-start */}
@@ -12,15 +18,19 @@ function Rightsidebar() {
               <li>
                 <Link to="/">
                   <span>
-                    <i className="fa-light fa-address-card" />
+                    <PersonPinCircleSharpIcon
+                      style={{ color: "red", fontSize: "3rem" }}
+                    />
                   </span>
-                  Home
+                  About
                 </Link>
               </li>
               <li>
                 <Link to="/resume">
                   <span>
-                    <i className="fa-light fa-file-user" />
+                    <AssignmentIndSharpIcon
+                      style={{ color: "green", fontSize: "2rem" }}
+                    />
                   </span>
                   Resume
                 </Link>
@@ -28,7 +38,13 @@ function Rightsidebar() {
               <li>
                 <Link to="/portfolio">
                   <span>
-                    <i className="fa-light fa-briefcase" />
+                    <EmojiEmotionsSharpIcon
+                      style={{
+                        color:
+                          theme.palette.mode === "dark" ? "#f5c71a" : "#f5c71a",
+                        fontSize: "2rem",
+                      }}
+                    />
                   </span>
                   Portfolio
                 </Link>
@@ -36,7 +52,10 @@ function Rightsidebar() {
               <li>
                 <Link to="/blog">
                   <span>
-                    <i className="fa-light fa-newspaper" />
+                    <i
+                      className="fa-light fa-newspaper"
+                      style={{ color: "#8e44ad" }}
+                    />
                   </span>
                   Blogs
                 </Link>
@@ -44,7 +63,9 @@ function Rightsidebar() {
               <li>
                 <Link to="/contact">
                   <span>
-                    <i className="fa-light fa-address-book" />
+                    <ContactPhoneIcon
+                      style={{ color: "#16a085", fontSize: "1.8rem" }}
+                    />
                   </span>
                   Contact
                 </Link>

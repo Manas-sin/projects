@@ -1,10 +1,55 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import '/public/css/main.css'
 
+const Head = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-function Head() {
+  useEffect(() => {
+    // Check the saved dark mode preference from local storage
+    const savedDarkMode = localStorage.getItem('darkTheme') === 'true';
+    setIsDarkMode(savedDarkMode);
+    document.body.classList.toggle('dark-theme', savedDarkMode);
+
+    // Update background images based on dark mode preference
+    const home1bgimg = document.querySelector('.page-wrapper');
+    const home2bgimg = document.querySelector('.page-wrapper-2');
+    if (home1bgimg) {
+      home1bgimg.style.backgroundImage = savedDarkMode
+        ? "url('/img/bg/page-bg-dark-1.jpg')"
+        : "url('/img/bg/page-bg-1.jpg')";
+    }
+    if (home2bgimg) {
+      home2bgimg.style.backgroundImage = savedDarkMode
+        ? "url('/img/bg/page-bg-dark-2.jpg')"
+        : "url('/img/bg/page-bg-1.jpg')";
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(prevMode => {
+      const newMode = !prevMode;
+      localStorage.setItem('darkTheme', newMode);
+      document.body.classList.toggle('dark-theme', newMode);
+
+      // Update background images based on new dark mode state
+      const home1bgimg = document.querySelector('.page-wrapper');
+      const home2bgimg = document.querySelector('.page-wrapper-2');
+      if (home1bgimg) {
+        home1bgimg.style.backgroundImage = newMode
+          ? "url('/img/bg/page-bg-dark-2.jpg')"
+          : "url('/img/bg/page-bg-1.jpg')";
+      }
+      if (home2bgimg) {
+        home2bgimg.style.backgroundImage = newMode
+          ? "url('/img/bg/page-bg-dark-1.jpg')"
+          : "url('/img/bg/page-bg-1.jpg')";
+      }
+
+      return newMode;
+    });
+  };
+
   return (
-    <>
-    {/* header-start */}
     <div className="bostami-header-area mb-30 z-index-5">
       <div className="container">
         <div className="bostami-header-wrap">
@@ -12,20 +57,19 @@ function Head() {
             {/* logo */}
             <div className="col-6">
               <div className="bostami-header-logo">
-                <a
-                  className="site-logo"
-                  href=""
-                >
-                  <img src="public/img/logo/logo-2.png"   alt="" />
+                <a className="site-logo" href="/">
+                  <img src="/img/logo/logo-2.png" alt="Logo" />
                 </a>
               </div>
             </div>
             {/* menu btn */}
             <div className="col-6">
               <div className="bostami-header-menu-btn text-right">
-                <div className="dark-btn dark-btn-stored dark-btn-icon">
-                  <i className="fa-light fa-moon" />
-                  <i className="fa-light fa-sun" />
+                <div
+                  className="dark-btn dark-btn-stored dark-btn-icon"
+                  onClick={toggleDarkMode}
+                >
+                  <i className={`fa-light ${isDarkMode ? 'fa-sun' : 'fa-moon'}`} />
                 </div>
                 <div className="menu-btn toggle_menu">
                   <span />
@@ -42,9 +86,7 @@ function Head() {
         </div>
       </div>
     </div>
-    {/* header-end */}
-  </>
-  )
-}
+  );
+};
 
-export default Head
+export default Head;

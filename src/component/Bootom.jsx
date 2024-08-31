@@ -1,19 +1,18 @@
 import React from 'react'
 
-function footer() {
+function Bootom() {
   return (
     <>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/swipper-bundle.min.js"></script>
-    <script src="assets/js/jquery.meanmenu.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/appear.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swipper-bundle.min.js"></script>
+    <script src="/js/jquery.meanmenu.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="/js/odometer.min.js"></script>
+    <script src="/js/appear.min.js"></script>
+    <script src="/js/main.js"></script>
     </>
   )
 }
-
-export default footer
+export default Bootom

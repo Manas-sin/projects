@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "../component/head";
+import Head from "../component/Head";
 import Leftsidebar from "../component/leftsidebar";
 import Rightsidebar from "../component/rightsidebar";
 import App from "../App";
@@ -12,8 +12,9 @@ function Contact() {
       <Heads />
       <div
         className="page-wrapper home-1"
-        style={{ backgroundImage: "url('/public/img/bg/page-bg-1.jpg')" }}
+        style={{ backgroundImage: "url('/img/bg/page-bg-1.jpg')" }} // Updated path
       >
+        
         <Head />
         <div>
           <div className="container z-index-3">
@@ -29,7 +30,7 @@ function Contact() {
                   <div className="section-wrapper pr-60 pl-60 mb-60">
                     <div className="contact-area bg-light-white-2">
                       <h5 className="contact-title">
-                        I'm always open to discussing product
+                        I'm always open to discussing product 
                       </h5>
                       <h5 className="contact-title-b">
                         design work or partnerships.
@@ -79,8 +80,8 @@ function Contact() {
                   </div>
                   <div className="footer-copyright text-center bg-light-white-2 pt-25 pb-25">
                     <span>
-                      © 2024 All Rights Reserved by{" Manas Singh"}
-                      <a target="_blank" rel="noopener noreferrer"></a>.
+                      © 2024 All Rights Reserved by Manas Singh
+                      <a target="_blank" rel="noopener noreferrer" href="#"></a>
                     </span>
                   </div>
                 </div>
@@ -89,9 +90,10 @@ function Contact() {
             </div>
           </div>
         </div>
-        <Bootom />
       </div>
+      <Bootom />
     </React.Fragment>
   );
 }
+
 export default Contact;

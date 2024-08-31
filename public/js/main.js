@@ -72,7 +72,6 @@
       home1bgimg.style.backgroundImage =
         "url('public/img/bg/page-bg-dark-1.jpg')";
     }
-
     // Attach click event to the specified div
     $(".dark-btn").on("click", toggleDarkTheme);
   });
