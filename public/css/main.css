@@ -2079,6 +2079,9 @@ textarea:focus::placeholder {
 .bostami-section-title-wrap .section-title {
   margin-bottom: 0;
   font-weight: 500;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .bostami-section-title-wrap .section-title i {
   font-size: 30px;
@@ -2701,6 +2704,10 @@ textarea:focus::placeholder {
   margin-bottom: 21px;
   margin-top: -180px;
 }
+
+.bostami-parsonal-info-img:hover {
+  cursor: pointer;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .bostami-parsonal-info-img {
     width: 210px;
@@ -3120,6 +3127,7 @@ textarea:focus::placeholder {
   border-radius: 12px;
   padding-top: 25px;
 }
+
 .bostami-card-item .card-subtitle {
   display: block;
   font-size: 14px;
@@ -3199,16 +3207,7 @@ textarea:focus::placeholder {
   background-color: #ca56f2;
 }
 
-.knowledeges-item-wrap .gk-item {
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 400;
-  background: #edf2f2;
-  border-radius: 8px;
-  padding: 5px 20px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-}
+
 
 @media (max-width: 767px) {
   .bostami-resume-page {
@@ -4939,4 +4938,98 @@ body.dark-theme .bostami-header-area {
 .dark-theme {
   background-color: #000000; /* example for dark background */
   color: #f1f1f1; /* example for text color */
+}
+
+
+
+
+
+
+.education-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+ /* Center the timeline in the container */
+}
+/* .timeline-item-content{
+  width: 2rem;
+} */
+.custom-timeline .ant-timeline-item-content {
+  font-size: 12px; /* Larger text size */
+  padding: 8px 15px; /* Padding for spacing inside the box */
+  border: 2px solid #ccc; /* Adds a border around the content */
+  border-radius: 8px; /* Rounded corners for the box */
+  background-color: #f9f9f9; /* Light background */
+  width: 100%; /* Set width to 80% of the container */
+  max-width: 700px; /* Ensure boxes don't get too large */
+   box-sizing: border-box; /* Include padding and border in the width calculation */
+  word-wrap: break-word; /* Ensure long words break onto the next line */
+  white-space: normal; /* Ensure content wraps */
+}
+
+@media screen and (max-width: 768px) {
+  .custom-timeline .ant-timeline-item-content {
+    width: 100%; /* Use full width on smaller screens */
+    max-width: 100%; /* Remove max-width to avoid limiting size on small screens */
+    font-size: 14px; /* Slightly smaller font for mobile */
+  }
+}
+
+
+.education-container-title-wrap{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.para{
+  margin: 1rem;
+   display: flex;
+    font-weight:300;
+    font-size:0.9rem;
+   justify-content:center;
+   word-wrap: inherit;
+   align-items: center;
+   max-width: 900px; /* Set max-width to keep it compact */
+
+}
+
+
+
+
+.knowledeges-item-wrap {
+  display: grid;
+  margin: 2rem;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 4fr)); /* Responsive grid */
+  gap: 2px;
+}
+.dark-theme .page-wrapper .knowledeges-item-wrap .gk-item {
+  background-color: #0d0d0d;
+}
+.gk-item {
+  display: flex;
+  flex-direction: column; /* Arrange image and text vertically */
+  align-items: center; /* Center align image and text */
+  justify-content: center; /* Center content vertically */
+  padding: 10px; /* Add padding inside the box */
+  text-align: center; /* Center text */
+}
+.knowledge-image {
+  max-width: 60px; /* Set max width to ensure uniform image size */
+  max-height: 60px; /* Set max height to ensure uniform image size */
+  object-fit: contain; /* Preserve image aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+.knowledge-image:hover {
+  cursor: pointer;
+  transform: scale(1.3); /* Slightly zoom in on hover */
+}
+.email {
+  display: flex !important; /* Use !important properly */
+  flex-wrap: wrap !important; /* `text-wrap` is not valid; use `flex-wrap` instead */
+  font-size: 11px !important; /* Correct the font size syntax */
+  font-weight: 500 !important;
 }

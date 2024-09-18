@@ -1,20 +1,40 @@
-import React from "react";
+import SendIcon from '@mui/icons-material/Send';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import React, { useState } from "react";
 import Head from "../component/Head";
 import Leftsidebar from "../component/leftsidebar";
 import Rightsidebar from "../component/rightsidebar";
-import App from "../App";
-import Heads from "../component/Heads";
-import Bootom from "../component/Bootom";
 
 function Contact() {
+  // Initialize state with default values
+  const [value, setValue] = useState({});
+
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setValue(prevData => ({
+      ...prevData,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data:", value);
+    
+    setValue ({});
+  };
+
   return (
     <React.Fragment>
-      <Heads />
+
       <div
         className="page-wrapper home-1"
-        style={{ backgroundImage: "url('/img/bg/page-bg-1.jpg')" }} // Updated path
+        style={{ backgroundImage: "url('/img/bg/page-bg-1.jpg')" }}
       >
-        
         <Head />
         <div>
           <div className="container z-index-3">
@@ -27,54 +47,62 @@ function Contact() {
                       <h2 className="page-title">Contact</h2>
                     </div>
                   </div>
-                  <div className="section-wrapper pr-60 pl-60 mb-60">
+                  <div className="section-wrapper pr-60 pl-60 mb-30">
                     <div className="contact-area bg-light-white-2">
                       <h5 className="contact-title">
-                        I'm always open to discussing product 
+                        I'm always open to discussing product
                       </h5>
                       <h5 className="contact-title-b">
                         design work or partnerships.
                       </h5>
                       <form
                         className="contact-form"
-                        action="https://formspree.io/f/xoqrgaab"
-                        method="post"
+                        onSubmit={handleSubmit}
                       >
-                        <div className="form-input-item mb-60">
-                          <label className="input-lebel name">Name *</label>
-                          <input
-                            name="name"
-                            className="input-box name"
-                            type="text"
-                            required
+                        <Box
+                          sx={{ "& > :not(style)": { m: 2, width: "100%" } }}
+                        >
+                          <TextField
+                            id="name"
+                            value={value.name || ''}  // Ensure value is a string
+                            onChange={handleChange}
+                            label="Name"
+                            variant="standard"
                           />
-                        </div>
-                        <div className="form-input-item mb-60">
-                          <label className="input-lebel gmail">Email *</label>
-                          <input
-                            name="email"
-                            className="input-box gmail"
-                            type="email"
-                            required
+                        </Box>
+                        <Box
+                          sx={{ "& > :not(style)": { m: 2, width: "100%" } }}
+                        >
+                          <TextField
+                            id="email"
+                            value={value.email || ''}  // Ensure value is a string
+                            onChange={handleChange}
+                            label="Email"
+                            variant="standard"
                           />
-                        </div>
-                        <div className="form-input-item mb-40">
-                          <label className="input-lebel message">
-                            Message *
-                          </label>
-                          <textarea
-                            name="message"
-                            className="input-box message"
-                            cols={30}
-                            rows={10}
-                            defaultValue=""
+                        </Box>
+                        <Box
+                          sx={{ "& > :not(style)": { m: 2, width: "100%" } }}
+                        >
+                          <TextField
+                            id="messages"
+                            value={value.messages || ''}  // Ensure value is a string
+                            onChange={handleChange}
+                            label="Message"
+                            variant="standard"
+                            multiline
+                            rows={2}
                           />
-                        </div>
-                        <div className="form-btn-wrap">
-                          <button type="submit" className="form-btn">
-                            Submit
-                          </button>
-                        </div>
+                        </Box>
+                        <Stack direction="row" spacing={1} className="mt-3 p-2 m-2">
+                          <Button 
+                            type="submit"
+                            variant="contained" 
+                            endIcon={<SendIcon />}
+                          >
+                            Send
+                          </Button>
+                        </Stack>
                       </form>
                     </div>
                   </div>
@@ -91,7 +119,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <Bootom />
+
     </React.Fragment>
   );
 }

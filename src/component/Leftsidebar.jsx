@@ -1,4 +1,8 @@
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 import React from "react";
+
+
 
 function Leftsidebar() {
   return (
@@ -8,12 +12,25 @@ function Leftsidebar() {
         <div className="bostami-parsonal-info-area">
           <div className="bostami-parsonal-info-wrap">
             {/* img */}
-            <div className="bostami-parsonal-info-img">
-              <img
-                src="public/img/parsonal-info/parson-img-1.png"
-                alt="avatar"
-              />
-            </div>
+              <div className="bostami-parsonal-info-img">
+                <img
+                  src="public/img/parsonal-info/parson-img-1.png"
+                  alt="avatar"
+                />
+                  {/* <Image.PreviewGroup
+    items={[
+      'public/img/parsonal-info/parson-img-1.png',
+      'public/img/parsonal-info/parson-img-1.png',
+      'public/img/parsonal-info/parson-img-1.png',
+    ]}
+  >
+    <Image
+      width={200}
+      src="public/img/parsonal-info/parson-img-1.png"
+      />
+  </Image.PreviewGroup> */}
+              </div>
+             
             {/* name */}
             <h4 className="bostami-parsonal-info-name">
               <a href="#">Manas Singh</a>
@@ -58,18 +75,20 @@ function Leftsidebar() {
                   <p>+91813057749</p>
                 </div>
               </div>
-              <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+            
                 <div className="bostami-parsonal-info-contact-item email">
                   <div className="icon">
                     <i className="fa-regular fa-envelope-open-text" />
                   </div>
-
+                
                   <div className="text">
                     <span>Email</span>
-                    <p>ManasSingh910@gmail.com</p>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+                    <p className="email">manassingh910@gmail.com</p>
+                    </a>
                   </div>
+
                 </div>
-              </a>
 
               <a href="https://www.google.com/maps/place/RC-1145,+Shiv+Park,+Khora+Colony,+Sector+62A,+Noida,+Uttar+Pradesh+201020/@28.6161555,77.3438563,19.03z/data=!4m14!1m7!3m6!1s0x390ce516eb0c96d5:0xd4f0fef184d586fd!2sS+S+D+Public+School!8m2!3d28.6162255!4d77.3445446!16s%2Fg%2F11k3x34t08!3m5!1s0x390ce53ccf4b6dff:0xe3a765c2ea499838!8m2!3d28.6164259!4d77.3445676!16s%2Fg%2F11k446tj6p?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D">
                 <div className="bostami-parsonal-info-contact-item location">
@@ -93,14 +112,26 @@ function Leftsidebar() {
               </div>
             </div>
             {/* cv button */}
-            <div className="bostami-parsonal-info-btn">
-              <a className="btn-1" href="#">
-                <span className="icon">
-                  <i className="fa-regular fa-download" />
-                </span>
-                download cv
+            <Stack className="">
+              <a
+                href="./public/cv/Resume-Manas.pdf"
+                download="Resume-Manas.pdf"
+                style={{
+                  textDecoration: "italic",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  display: "flex",
+                }}
+              >
+                
+                <Button
+                  variant="outlined"
+                  startIcon={<i className="fa-regular fa-download" />} // Ensure Font Awesome is included in your project
+                >
+                  Download CV
+                </Button>
               </a>
-            </div>
+            </Stack>
           </div>
         </div>
       </div>

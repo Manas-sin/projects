@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Bootom() {
+function Bottom() {
   return (
     <>
-    <script src="/js/jquery.min.js"></script>
+    {/* <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/swipper-bundle.min.js"></script>
     <script src="/js/jquery.meanmenu.min.js"></script>
@@ -11,8 +11,8 @@ function Bootom() {
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/odometer.min.js"></script>
     <script src="/js/appear.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js"></script> */}
     </>
   )
 }
-export default Bootom
+export default Bottom

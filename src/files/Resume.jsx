@@ -1,15 +1,12 @@
+import { Timeline } from "antd";
 import React from "react";
 import Head from "../component/Head";
 import Leftsidebar from "../component/leftsidebar";
 import Rightsidebar from "../component/rightsidebar";
-import App from "../App";
-import Heads from "../component/Heads";
-import Bootom from "../component/Bootom";
 
 function resume() {
   return (
     <React.Fragment>
-      <Heads />
       <div
         className="page-wrapper home-1"
         style={{ backgroundImage: "url('/public/img/bg/page-bg-1.jpg')" }}
@@ -26,138 +23,197 @@ function resume() {
                       <h2 className="page-title">resume</h2>
                     </div>
                   </div>
-                  <div className="section-wrapper pl-60 pr-60 mb-60">
-                    <div className="row">
-                      <div className="col-xl-6 col-lg-7">
-                        <div className="bostami-section-title-wrap mb-20">
-                          <h4 className="section-title">
-                            <i className="fa-light fa-school" />
-                            Education
-                          </h4>
-                        </div>
-                        <div className="bostami-card-wrap">
-                          <div className="bostami-card-item bg-prink mb-20">
-                            <span className="card-subtitle">2021-2024</span>
-                            <h6 className="card-title">
-                              Ph.D in Horriblensess <span>- University,</span>
-                            </h6>
-                            <p className="card-text">Los Angeles, CA</p>
-                          </div>
-                          <div className="bostami-card-item bg-catkrill mb-20">
-                            <span className="card-subtitle">2017-2021</span>
-                            <h6 className="card-title">
-                              Computer Science <span>- Imperialize</span>
-                            </h6>
-                            <p className="card-text">Technical Institute</p>
-                          </div>
-                          <div className="bostami-card-item bg-prink">
-                            <span className="card-subtitle">2015-2017</span>
-                            <h6 className="card-title">
-                              Graphic Designer <span>- Web Graphy,</span>
-                            </h6>
-                            <p className="card-text">Los Angeles, CA</p>
-                          </div>
-                        </div>
+                  <div className="section-wrapper bg-light-white-2 pt-40 pb-40 pl-60 pr-60">
+                    <div className="education-container">
+                      <div className="bostami-section-title-wrap mb-20">
+                        <h4 className="section-title">
+                          <i className="fa-light fa-briefcase" />
+                         Experience
+                        </h4>
+                        <p className="para">
+                        Solving complex problems and delivering innovative solutions in tech.
+                        </p>
                       </div>
-                      <div className="col-xl-6 col-lg-5">
-                        <div className="bostami-section-title-wrap mb-20">
-                          <h4 className="section-title">
-                            <i className="fa-light fa-briefcase" />
-                            experience
-                          </h4>
-                        </div>
-                        <div className="bostami-card-item bg-catkrill  mb-20">
-                          <span className="card-subtitle">2019 - Present</span>
-                          <h6 className="card-title">Sr. Software Tester</h6>
-                          <p className="card-text">Google Inc.</p>
-                        </div>
-                        <div className="bostami-card-item bg-prink mb-20">
-                          <span className="card-subtitle">2015-2017</span>
-                          <h6 className="card-title">Cr. Web Developer</h6>
-                          <p className="card-text">elite-themes24 ltd.</p>
-                        </div>
-                        <div className="bostami-card-item bg-catkrill ">
-                          <span className="card-subtitle">2014 - 2015</span>
-                          <h6 className="card-title">Jr. Web Developer</h6>
-                          <p className="card-text">Creative Gigs.</p>
-                        </div>
+                      <Timeline
+                        mode="alternate"
+                        className="custom-timeline m-3"
+                        items={[
+                          {
+                            children: (
+                              <div className="timeline-item-content">
+                                <b> Midas Consulting </b> <br/>
+                                <strong className="m-2">Web Developer</strong>
+                                 (<i>May-16-2024 at present</i>)
+                              </div>
+                            ),
+                          },
+                          {
+                            children: (
+                              <div className="timeline-item-content">
+                                <b>  Career guide </b> <br/>
+                                <strong className="m-2">Web Developer</strong>
+                                 (<i> Jan 2023- March 2024</i>)
+                              </div>
+                            ),
+                          },
+                          {
+                            children: (
+                              <div className="timeline-item-content">
+                                <b> Webloop infotec </b> <br/>
+                                <strong className="m-2">Web Developer intern</strong>
+                                 (<i> March 2021– June 2021</i>)
+                              </div>
+                            ),
+                          },
+                        ]}
+                      />
+                    </div>
+                    <div className="education-container">
+                      <div className="bostami-section-title-wrap mb-20">
+                        <h4 className="section-title">
+                          <i className="fa-light fa-school" />
+                          Education
+                        </h4>
+                        <p className="para">
+                        Constantly evolving and adapting,innovation and a commitment to lifelong learning.
+                        </p>
                       </div>
+                      <Timeline
+                        mode="alternate"
+                        className="custom-timeline m-3"
+                        items={[
+                          {
+                            children: (
+                              <div className="timeline-item-content">
+                                <b> Master in Computer Applications </b> <br/>
+                                <strong className="m-2">MCA</strong>
+                                 (<i> 2023 - 2025 </i>)
+                              </div>
+                            ),
+                          },
+                          {
+                            children: (
+                              <div className="timeline-item-content">
+                                <b> Bachelor in Computer Applications </b> <br/>
+                                <strong className="m-2" >BCA</strong> 
+                                 (<i> 2018 - 2021 </i>)
+                              </div>
+                            ),
+                          },
+                          {
+                            children: (
+                              <div className="timeline-item-content">
+                                <b> Dashemsh Public School </b> <br/>
+                                <strong className="m-2" >10 + 2</strong> 
+                                 (<i> 2015 - 2018 </i>)
+                              </div>
+                            ),
+                          },
+                        ]}
+                      />
                     </div>
                   </div>
-                  <div className="section-wrapper bg-light-white-2 pt-70 pb-60 pl-60 pr-60">
-                    <div className="row">
-                      <div className="col-xl-6 col-lg-7">
-                        <div className="bostami-section-title-wrap mb-20">
-                          <h4 className="section-title">Working Skills</h4>
-                        </div>
-                        <div className="skill-bar-wrap">
-                          <div className="skill-bar-item mb-30">
-                            <div className="title-wrap">
-                              <h5 className="title">Web Design</h5>
-                              <span className="count">85%</span>
-                            </div>
-                            <div className="progress-bar-wrap">
-                              <div
-                                className="progress-line progress-bg-1"
-                                style={{ width: "85%" }}
-                              ></div>
-                            </div>
-                          </div>
-                          <div className="skill-bar-item mb-30">
-                            <div className="title-wrap">
-                              <h5 className="title">Mobile App</h5>
-                              <span className="count">55%</span>
-                            </div>
-                            <div className="progress-bar-wrap">
-                              <div
-                                className="progress-line progress-bg-2"
-                                style={{ width: "55%" }}
-                              ></div>
-                            </div>
-                          </div>
-                          <div className="skill-bar-item mb-30">
-                            <div className="title-wrap">
-                              <h5 className="title">Illustrator</h5>
-                              <span className="count">65%</span>
-                            </div>
-                            <div className="progress-bar-wrap">
-                              <div
-                                className="progress-line progress-bg-3"
-                                style={{ width: "65%" }}
-                              ></div>
-                            </div>
-                          </div>
-                          <div className="skill-bar-item">
-                            <div className="title-wrap">
-                              <h5 className="title">Photoshope</h5>
-                              <span className="count">72%</span>
-                            </div>
-                            <div className="progress-bar-wrap">
-                              <div
-                                className="progress-line progress-bg-4"
-                                style={{ width: "72%" }}
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
 
-                      <div className="col-xl-6 col-lg-5">
+                  <div className="section-wrapper bg-light-white-2 pt-20 pb-60 pl-60 pr-60">
+                    <div className="row">
+                      <div className="col-xl-12 col-lg-12">
                         <div className="bostami-section-title-wrap mb-20">
-                          <h4 className="section-title">Knowledges</h4>
+                          <h4 className="section-title">Skills</h4>
+                          <p className="para">
+                            I worked with these front-end frameworks back-end
+                            and libraries.{" "}
+                          </p>
                         </div>
                         <div className="knowledeges-item-wrap">
-                          <span className="gk-item">Digital Design</span>
-                          <span className="gk-item">Marketing</span>
-                          <span className="gk-item">Communication</span>
-                          <span className="gk-item">Social Media</span>
-                          <span className="gk-item">Time Management</span>
-                          <span className="gk-item">Flexibility</span>
-                          <span className="gk-item">Print</span>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                              alt="Html"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
+                              alt="Css"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                              alt="JavaScript"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg"
+                              alt="Git & Github"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg"
+                              alt="Npm"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://redux.js.org/img/redux-logo-landscape.png"
+                              alt="Redux"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                              alt="Node.js"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+                              alt="Java"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+                              alt="TypeScript"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                              alt="React.js"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="../img/skill/reactRoute.png"
+                              alt="React Router"
+                              className="knowledge-image"
+                            />
+                          </div>
+                          <div className="gk-item">
+                            <img
+                              src="../img/skill/webpack.png"
+                              alt="Webpack"
+                              className="knowledge-image"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
                   <div className="footer-copyright text-center bg-light-white-2 pt-25 pb-25">
                     <span>
                       © 2024 All Rights Reserved by Manas Singh
@@ -171,7 +227,6 @@ function resume() {
           </div>
         </div>
       </div>
-      <Bootom />
     </React.Fragment>
   );
 }
