@@ -2,14 +2,16 @@
   "use strict";
 
   // preloader start
-  // let preloader = document.querySelector("#preloader");
-  // window.addEventListener("load", function () {
-  //   preloader.classList.add("preloaded");
-  //   setTimeout(function () {
-  //     preloader.remove();
-  //   }, 1500);
-  // });
+  let preloader = document.querySelector("#preloader");
+  window.addEventListener("load", function () {
+    preloader.classList.add("preloaded");
+    setTimeout(function () {
+      preloader.remove();
+    }, 1500);
+  });
   // preloader end
+
+
 
   // meanmenu start
   $(".main_menu").meanmenu({
@@ -27,15 +29,13 @@
     meanScreenWidth: "991",
   });
   // meanmenu end
+  let menutoggole = document.querySelector(".toggle_menu");
+  let mobilemenu = document.querySelector(".mobile-menu");
+  menutoggole.onclick = function () {
+    menutoggole.classList.toggle("active");
+    mobilemenu.classList.toggle("active");
+  };
 
-  // mobile menu start
-  // let menutoggole = document.querySelector(".toggle_menu");
-  // let mobilemenu = document.querySelector(".mobile-menu");
-  // menutoggole.onclick = function () {
-  //   menutoggole.classList.toggle("active");
-  //   mobilemenu.classList.toggle("active");
-  // };
-  // mobile menu end
 
   // dark mood start
   var darktoggle = document.querySelector(".dark-btn-icon");
@@ -46,8 +46,6 @@
   function toggleDarkTheme() {
     // Toggle the class on the body element
     $("body").toggleClass("dark-theme");
-
-    // Store the preference in local storage
     const isDarkTheme = $("body").hasClass("dark-theme");
     localStorage.setItem("darkTheme", isDarkTheme);
 
@@ -205,3 +203,5 @@
   // WOW active
   new WOW().init();
 })(jQuery);
+
+

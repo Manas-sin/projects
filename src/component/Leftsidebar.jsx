@@ -41,17 +41,17 @@ function Leftsidebar() {
             {/* socail link */}
             <ul className="bostami-parsonal-info-social-link mb-30">
               <li>
-                <a href="#" className="facebook">
+                <a href="https://www.facebook.com/profile.php?id=100008176530103" className="facebook">
                   <i className="fa-brands fa-facebook-f" />
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="https://x.com/manassi63116169" className="twitter">
                   <i className="fa-brands fa-twitter" />
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="https://www.instagram.com/manas_singh_rajput1/" className="instagram">
                   <i className="fa-brands fa-instagram" />
                 </a>
               </li>

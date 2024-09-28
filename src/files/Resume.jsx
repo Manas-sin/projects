@@ -28,10 +28,11 @@ function resume() {
                       <div className="bostami-section-title-wrap mb-20">
                         <h4 className="section-title">
                           <i className="fa-light fa-briefcase" />
-                         Experience
+                          Experience
                         </h4>
                         <p className="para">
-                        Solving complex problems and delivering innovative solutions in tech.
+                          Solving complex problems and delivering innovative
+                          solutions in tech.
                         </p>
                       </div>
                       <Timeline
@@ -41,27 +42,29 @@ function resume() {
                           {
                             children: (
                               <div className="timeline-item-content">
-                                <b> Midas Consulting </b> <br/>
-                                <strong className="m-2">Web Developer</strong>
-                                 (<i>May-16-2024 at present</i>)
+                                <b> Midas Consulting </b> <br />
+                                <strong className="m-2">Web Developer</strong>(
+                                <i>May-16-2024 at present</i>)
                               </div>
                             ),
                           },
                           {
                             children: (
                               <div className="timeline-item-content">
-                                <b>  Career guide </b> <br/>
-                                <strong className="m-2">Web Developer</strong>
-                                 (<i> Jan 2023- March 2024</i>)
+                                <b> Career guide </b> <br />
+                                <strong className="m-2">Web Developer</strong>(
+                                <i> Jan 2023- March 2024</i>)
                               </div>
                             ),
                           },
                           {
                             children: (
                               <div className="timeline-item-content">
-                                <b> Webloop infotec </b> <br/>
-                                <strong className="m-2">Web Developer intern</strong>
-                                 (<i> March 2021– June 2021</i>)
+                                <b> Webloop infotec </b> <br />
+                                <strong className="m-2">
+                                  Web Developer intern
+                                </strong>
+                                (<i> March 2021– June 2021</i>)
                               </div>
                             ),
                           },
@@ -75,7 +78,8 @@ function resume() {
                           Education
                         </h4>
                         <p className="para">
-                        Constantly evolving and adapting,innovation and a commitment to lifelong learning.
+                          Constantly evolving and adapting,innovation and a
+                          commitment to lifelong learning.
                         </p>
                       </div>
                       <Timeline
@@ -85,27 +89,28 @@ function resume() {
                           {
                             children: (
                               <div className="timeline-item-content">
-                                <b> Master in Computer Applications </b> <br/>
-                                <strong className="m-2">MCA</strong>
-                                 (<i> 2023 - 2025 </i>)
+                                <b> Master in Computer Applications </b> <br />
+                                <strong className="m-2">MCA</strong>(
+                                <i> 2023 - 2025 </i>)
                               </div>
                             ),
                           },
                           {
                             children: (
                               <div className="timeline-item-content">
-                                <b> Bachelor in Computer Applications </b> <br/>
-                                <strong className="m-2" >BCA</strong> 
-                                 (<i> 2018 - 2021 </i>)
+                                <b> Bachelor in Computer Applications </b>{" "}
+                                <br />
+                                <strong className="m-2">BCA</strong>(
+                                <i> 2018 - 2021 </i>)
                               </div>
                             ),
                           },
                           {
                             children: (
                               <div className="timeline-item-content">
-                                <b> Dashemsh Public School </b> <br/>
-                                <strong className="m-2" >10 + 2</strong> 
-                                 (<i> 2015 - 2018 </i>)
+                                <b> Dashemsh Public School </b> <br />
+                                <strong className="m-2">10 + 2</strong>(
+                                <i> 2015 - 2018 </i>)
                               </div>
                             ),
                           },
@@ -213,7 +218,6 @@ function resume() {
                       </div>
                     </div>
                   </div>
-
                   <div className="footer-copyright text-center bg-light-white-2 pt-25 pb-25">
                     <span>
                       © 2024 All Rights Reserved by Manas Singh

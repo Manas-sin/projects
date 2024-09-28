@@ -4040,9 +4040,9 @@ textarea:focus::placeholder {
   height: 250px;
   position: relative;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .loader_line:before {
@@ -4077,7 +4077,7 @@ textarea:focus::placeholder {
   -webkit-animation: lineround 1200ms linear 0s infinite;
   -o-animation: lineround 1200ms linear 0s infinite;
   animation: lineround 1200ms linear 0s infinite;
-  animation-delay: 2000ms;
+  animation-delay: 5000ms;
 }
 
 @keyframes lineheight {
@@ -5007,6 +5007,7 @@ body.dark-theme .bostami-header-area {
 }
 .dark-theme .page-wrapper .knowledeges-item-wrap .gk-item {
   background-color: #0d0d0d;
+  color: white;
 }
 .gk-item {
   display: flex;
@@ -5032,4 +5033,171 @@ body.dark-theme .bostami-header-area {
   flex-wrap: wrap !important; /* `text-wrap` is not valid; use `flex-wrap` instead */
   font-size: 11px !important; /* Correct the font size syntax */
   font-weight: 500 !important;
+}
+.blog-slider-single:hover {
+  transform: scale(1.05);  /* Slight scale increase on hover */
+}
+
+@keyframes animated-text-h2 {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes animated-cursor-h2 {
+  from { border-right-color: rgba(4, 130, 4, 0.75); }
+  to { border-right-color: transparent; }
+}
+
+.h2-typewriter {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 48px; /* Adjust size as needed */
+  color: rgb(0, 0, 0);
+  overflow: hidden; /* Ensures no overflow */
+  white-space: nowrap; /* Keeps text on one line */
+  border-right: solid 3px rgba(3, 145, 3, 0.75); /* Cursor effect */
+  width: 0; /* Start with no width */
+  /* Run the text animation for 3 seconds, wait for 2 seconds, then repeat */
+  animation: animated-text-h2 7s steps(30, end) forwards,
+             animated-cursor-h2 700ms steps(30, end) infinite;
+  animation-delay: 0s, 5s; /* Cursor starts immediately and runs for 3 seconds */
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; /* Repeat infinitely */
+}
+
+@keyframes restart-delay {
+  0% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;  /* Start hidden */
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;  /* Fade in to fully visible */
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;  /* Start hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade in animation */
+  animation-delay: 1.5s; /* Delay before starting the animation */
+}
+
+@keyframes animated-cursor-h2-dark {
+  from { border-right-color: rgba(144, 238, 144, 0.75); } /* Light green cursor */
+  to { border-right-color: transparent; } /* Cursor blinks off */
+}
+
+/* Typewriter effect for dark theme */
+.dark-theme .h2-typewriter {
+  color: white; /* Text color in dark mode */
+  border-right: solid 3px rgba(144, 238, 144, 0.75); /* Light green cursor */
+  }
+
+  .dark-theme .MuiInputBase-input {
+    color: white; /* Change the input text color to white */
+  }
+  
+  .dark-theme .MuiInputLabel-root {
+    color: white; /* Change the label color to white */
+  }
+  
+  .dark-theme .MuiButton-contained {
+    background-color: white; /* Change button background color */
+    color: black; /* Button text color */
+  }
+  
+  .dark-theme .MuiOutlinedInput-notchedOutline {
+    border-color: white; /* Change border color for input fields */
+  }
+
+/* Hide MobileView by default */
+.mobile-view {
+  /* display:contents; */
+  display: none;
+}
+
+/* Show MobileView when screen width is less   than or equal to 768px or equal to 1080px */
+@media only screen and (max-width: 768px), only screen and (min-width: 1080px) and (max-width: 1080px) {
+  .mobile-view {
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+/* Ensures that the dark mode toggle button is fixed */
+
+
+/* Ensures that SpeedDial stays fixed */
+.speed-dial {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 999; /* Ensures it stays above other elements, but below dark mode toggle */
+}
+
+
+/* about */
+@media only screen and (max-width: 768px), only screen and (min-width: 1080px) and (max-width: 1080px) {
+  .section-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h2.h2-typewriter {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  h5.fade-in {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+}
+
+
+
+.example-text {
+  color: rgb(0, 0, 0); /* Default text color */
+  font-size: 3rem; /* Font size */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  opacity: 0; /* Start with opacity 0 for fade-in */
+  animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+  font-weight: 750; /* Make the font bold */
+}
+
+
+/* Responsive media query for handling different screen sizes */
+@media only screen and (max-width: 768px) {
+  .example-text {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media only screen and (min-width: 1080px) and (max-width: 1080px) {
+  .example-text {
+    font-size: 3rem; /* Maintain the original size at this width */
+  }
+}
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    opacity: 1; /* End fully visible */
+  }
+}
+
+.dark-theme .example-text {
+background: #16028E;
+background: linear-gradient(135deg, #16028E, #17AFEA);
+
 }

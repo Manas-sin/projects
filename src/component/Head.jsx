@@ -44,7 +44,6 @@ const Head = () => {
           ? "url('/img/bg/page-bg-dark-1.jpg')"
           : "url('/img/bg/page-bg-1.jpg')";
       }
-
       return newMode;
     });
   };
@@ -58,7 +57,7 @@ const Head = () => {
             <div className="col-6">
               <div className="bostami-header-logo">
                 <a className="site-logo" href="/">
-                  <img src="/img/logo/logo-2.png" alt="Logo" />
+                <span className="example-text">ManasSingh</span> {/* Apply the CSS class here */}
                 </a>
               </div>
             </div>
@@ -71,19 +70,13 @@ const Head = () => {
                 >
                   <i className={`fa-light ${isDarkMode ? 'fa-sun' : 'fa-moon'}`} />
                 </div>
-                <div className="menu-btn toggle_menu">
-                  <span />
-                  <span />
-                  <span />
-                </div>
+               
               </div>
             </div>
           </div>
         </div>
         {/* mobile menu */}
-        <div className="mobile-menu-wrap">
-          <div className="mobile-menu mobile_menu"></div>
-        </div>
+      
       </div>
     </div>
   );
