@@ -14,19 +14,19 @@ function Leftsidebar() {
             {/* img */}
               <div className="bostami-parsonal-info-img">
                 <img
-                  src="public/img/parsonal-info/parson-img-1.png"
+                  src="img/parsonal-info/parson-img-1.png"
                   alt="avatar"
                 />
                   {/* <Image.PreviewGroup
     items={[
-      'public/img/parsonal-info/parson-img-1.png',
-      'public/img/parsonal-info/parson-img-1.png',
-      'public/img/parsonal-info/parson-img-1.png',
+      'img/parsonal-info/parson-img-1.png',
+      'img/parsonal-info/parson-img-1.png',
+      'img/parsonal-info/parson-img-1.png',
     ]}
   >
     <Image
       width={200}
-      src="public/img/parsonal-info/parson-img-1.png"
+      src="img/parsonal-info/parson-img-1.png"
       />
   </Image.PreviewGroup> */}
               </div>
@@ -114,7 +114,7 @@ function Leftsidebar() {
             {/* cv button */}
             <Stack className="">
               <a
-                href="./public/cv/Resume-Manas.pdf"
+                href="./cv/Resume-Manas.pdf"
                 download="Resume-Manas.pdf"
                 style={{
                   textDecoration: "italic",

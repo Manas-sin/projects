@@ -50,13 +50,13 @@
     localStorage.setItem("darkTheme", isDarkTheme);
 
     if (isDarkTheme) {
-      darktoggle.src = "public/img/icon/sun-icon.png";
+      darktoggle.src = "img/icon/sun-icon.png";
       home1bgimg.style.backgroundImage =
-        "url('public/img/bg/page-bg-dark-2.jpg')";
+        "url('img/bg/page-bg-dark-2.jpg')";
     } else {
-      darktoggle.src = "public/img/icon/mon-icon.png";
-      home1bgimg.style.backgroundImage = "url('public/img/bg/page-bg-1.jpg')";
-      home2bgimg.style.backgroundImage = "url('public/img/bg/page-bg-1.jpg')";
+      darktoggle.src = "img/icon/mon-icon.png";
+      home1bgimg.style.backgroundImage = "url('img/bg/page-bg-1.jpg')";
+      home2bgimg.style.backgroundImage = "url('img/bg/page-bg-1.jpg')";
     }
   }
   // Check if the user preference is already stored in local storage
@@ -66,9 +66,9 @@
     // Apply the dark theme if the preference is set to true
     if (isDarkTheme) {
       $("body").addClass("dark-theme");
-      darktoggle.src = "public/img/icon/sun-icon.png";
+      darktoggle.src = "img/icon/sun-icon.png";
       home1bgimg.style.backgroundImage =
-        "url('public/img/bg/page-bg-dark-1.jpg')";
+        "url('img/bg/page-bg-dark-1.jpg')";
     }
     // Attach click event to the specified div
     $(".dark-btn").on("click", toggleDarkTheme);

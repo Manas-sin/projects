@@ -10,7 +10,7 @@ function blog() {
     <React.Fragment>
       <div
         className="page-wrapper home-1 "
-        style={{ backgroundImage: "url('/public/img/bg/page-bg-1.jpg')" }}
+        style={{ backgroundImage: "url('/img/bg/page-bg-1.jpg')" }}
       >
         <Head />
         <div>
