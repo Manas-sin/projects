@@ -1,8 +1,8 @@
 import { Timeline } from "antd";
 import React from "react";
 import Head from "../component/Head";
-import Leftsidebar from "../component/leftsidebar";
-import Rightsidebar from "../component/rightsidebar";
+import LeftBar from "../component/LeftBar";
+import RightBar from "../component/RightBar";
 
 function resume() {
   return (
@@ -15,7 +15,7 @@ function resume() {
         <div>
           <div className="container z-index-3">
             <div className="row">
-              <Leftsidebar />
+              <LeftBar />
               <div className="col-xxl-8 col-xl-9">
                 <div className="bostami-page-content-wrap">
                   <div className="section-wrapper pl-60 pr-60 pt-60">
@@ -226,7 +226,7 @@ function resume() {
                   </div>
                 </div>
               </div>
-              <Rightsidebar />
+              <RightBar />
             </div>
           </div>
         </div>

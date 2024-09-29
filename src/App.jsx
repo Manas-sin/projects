@@ -37,7 +37,6 @@ function App() {
             <Route path="/resume" element={<Resume />} />
           </Routes>
 
-          {/* Add the SpeedDial here, ensuring it's within the Router context */}
           <BasicSpeedDial />
         </>
       )}

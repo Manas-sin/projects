@@ -3,12 +3,12 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
+import { message } from 'antd'; // Import message and Space from Ant Design
 import emailjs from "emailjs-com"; // Ensure this is imported
 import React, { useEffect, useState } from "react";
 import Head from "../component/Head";
-import Leftsidebar from "../component/leftsidebar";
-import Rightsidebar from "../component/rightsidebar";
-import { message, Space } from 'antd'; // Import message and Space from Ant Design
+import LeftBar from "../component/LeftBar";
+import RightBar from "../component/RightBar";
 
 function Contact() {
   // Initialize state with default values
@@ -74,7 +74,7 @@ function Contact() {
         <div>
           <div className="container z-index-3">
             <div className="row">
-              <Leftsidebar />
+              <LeftBar />
               <div className="col-xxl-8 col-xl-9">
                 <div className="bostami-page-content-wrap">
                   <div className="section-wrapper pl-60 pr-60 pt-60">
@@ -131,7 +131,7 @@ function Contact() {
                   </div>
                 </div>
               </div>
-              <Rightsidebar />
+              <RightBar />
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import React from "react";
 
 
 
-function Leftsidebar() {
+function LeftBar() {
   return (
     <>
       {/* parsonal-info-start */}
@@ -17,18 +17,7 @@ function Leftsidebar() {
                   src="img/parsonal-info/parson-img-1.png"
                   alt="avatar"
                 />
-                  {/* <Image.PreviewGroup
-    items={[
-      'img/parsonal-info/parson-img-1.png',
-      'img/parsonal-info/parson-img-1.png',
-      'img/parsonal-info/parson-img-1.png',
-    ]}
-  >
-    <Image
-      width={200}
-      src="img/parsonal-info/parson-img-1.png"
-      />
-  </Image.PreviewGroup> */}
+              
               </div>
              
             {/* name */}
@@ -140,4 +129,4 @@ function Leftsidebar() {
   );
 }
 
-export default Leftsidebar;
+export default LeftBar;

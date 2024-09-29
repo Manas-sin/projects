@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles";
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Rightsidebar() {
+function RightBar() {
   const theme = useTheme();
   return (
     <>
@@ -65,4 +65,4 @@ function Rightsidebar() {
   );
 }
 
-export default Rightsidebar;
+export default RightBar;
