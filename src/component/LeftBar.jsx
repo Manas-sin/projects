@@ -61,7 +61,7 @@ function LeftBar() {
                 </div>
                 <div className="text">
                   <span>Phone</span>
-                  <p>+91813057749</p>
+                  <p>+918130577549</p>
                 </div>
               </div>
             

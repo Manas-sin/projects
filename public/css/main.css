@@ -5038,16 +5038,6 @@ body.dark-theme .bostami-header-area {
   transform: scale(1.05);  /* Slight scale increase on hover */
 }
 
-@keyframes animated-text-h2 {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes animated-cursor-h2 {
-  from { border-right-color: rgba(4, 130, 4, 0.75); }
-  to { border-right-color: transparent; }
-}
-
 .h2-typewriter {
   font-family: 'Source Code Pro', monospace;
   font-size: 48px; /* Adjust size as needed */
@@ -5056,13 +5046,32 @@ body.dark-theme .bostami-header-area {
   white-space: nowrap; /* Keeps text on one line */
   border-right: solid 3px rgba(3, 145, 3, 0.75); /* Cursor effect */
   width: 0; /* Start with no width */
-  /* Run the text animation for 3 seconds, wait for 2 seconds, then repeat */
-  animation: animated-text-h2 7s steps(30, end) forwards,
-             animated-cursor-h2 700ms steps(30, end) infinite;
-  animation-delay: 0s, 5s; /* Cursor starts immediately and runs for 3 seconds */
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite; /* Repeat infinitely */
+  animation: animated-text-h2 4s steps(30, end) 1s infinite, /* Add delay before restart */
+             animated-cursor-h2 500ms steps(50, end) infinite;
 }
+
+@keyframes animated-text-h2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%; /* Typing effect, full width at the end */
+  }
+}
+
+@keyframes animated-cursor-h2 {
+  0% {
+    border-right-color: rgba(3, 145, 3, 0.75);
+  }
+  50% {
+    border-right-color: transparent;
+  }
+  100% {
+    border-right-color: rgba(3, 145, 3, 0.75);
+  }
+}
+
+
 
 @keyframes restart-delay {
   0% { opacity: 1; }

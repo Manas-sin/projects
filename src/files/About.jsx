@@ -25,7 +25,7 @@ function Home() {
                   </div>
                     <div className="section-wrapper pl-60 pr-60">
                       <h2 className="h2-typewriter" align="center">
-                        Hi👋, I'm Manas Singh...
+                      Hi👋,I'm Manas Singh...
                       </h2>
                       <h5 className="fade-in" align="center">
                         Full Stack Developer | Tech Enthusiast | Lifelong
