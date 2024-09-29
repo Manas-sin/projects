@@ -19,17 +19,16 @@ function Home() {
                 <div className="bostami-page-content-wrap">
                   <div className="section-wrapper bg-light-white-2 pt-50 pb-60 pl-40 pr-40">
                   <div className="section-wrapper pl-60 pr-60 pt-60">
-                    <div className="bostami-page-title-wrap mb-15">
-                      <h2 className="page-title">About</h2>
+                    <div className="bostami-page-title-wrap mb-5">
+                      <h2 className="page-title mb-5">About</h2>
                     </div>
                   </div>
-                    <div className="section-wrapper pl-60 pr-60">
-                      <h2 className="h2-typewriter" align="center">
-                      Hi👋,I'm Manas Singh...
+                    <div className="section-wrapper pl-60 pr-60 mb-5">
+                      <h2 className="h2-typewriter " align="center">
+                      Hi👋,I'm Manas Singh......
                       </h2>
-                      <h5 className="fade-in" align="center">
-                        Full Stack Developer | Tech Enthusiast | Lifelong
-                        Learner
+                      <h5 className="fade-in mt-5" align="center">
+                        Full Stack Developer | Tech Enthusiast | Lifelong Learner
                       </h5>
                     </div>
                   </div>

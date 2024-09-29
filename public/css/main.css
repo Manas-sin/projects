@@ -5038,16 +5038,17 @@ body.dark-theme .bostami-header-area {
   transform: scale(1.05);  /* Slight scale increase on hover */
 }
 
+
 .h2-typewriter {
   font-family: 'Source Code Pro', monospace;
-  font-size: 48px; /* Adjust size as needed */
+  font-size: 48px; /* Default size */
   color: rgb(0, 0, 0);
   overflow: hidden; /* Ensures no overflow */
   white-space: nowrap; /* Keeps text on one line */
   border-right: solid 3px rgba(3, 145, 3, 0.75); /* Cursor effect */
   width: 0; /* Start with no width */
-  animation: animated-text-h2 4s steps(30, end) 1s infinite, /* Add delay before restart */
-             animated-cursor-h2 500ms steps(50, end) infinite;
+  animation: animated-text-h2 6s steps(40, end) 1s infinite, /* Typing animation */
+             animated-cursor-h2 500ms steps(50, end) infinite; /* Cursor blink animation */
 }
 
 @keyframes animated-text-h2 {
@@ -5058,7 +5059,6 @@ body.dark-theme .bostami-header-area {
     width: 100%; /* Typing effect, full width at the end */
   }
 }
-
 @keyframes animated-cursor-h2 {
   0% {
     border-right-color: rgba(3, 145, 3, 0.75);
@@ -5070,9 +5070,42 @@ body.dark-theme .bostami-header-area {
     border-right-color: rgba(3, 145, 3, 0.75);
   }
 }
-
-
-
+/* Smartphones, iPhone, portrait 480x320 phones */
+@media (min-width: 320px) {
+  .h2-typewriter {
+    font-size: 5.5vw; /* Slightly smaller font for small devices */
+  }
+}
+/* Portrait e-readers, smaller tablets @ 600 or @ 640 wide */
+@media (min-width: 481px) {
+  .h2-typewriter {
+    font-size: 5vw;
+  }
+}
+/* Portrait tablets, iPad, landscape e-readers, landscape 800x480 phones */
+@media (min-width: 641px) {
+  .h2-typewriter {
+    font-size: 4.5vw;
+  }
+}
+/* Tablet, landscape iPad, lo-res laptops and desktops */
+@media (min-width: 961px) {
+  .h2-typewriter {
+    font-size: 4vw;
+  }
+}
+/* Big landscape tablets, laptops, and desktops */
+@media (min-width: 1025px) {
+  .h2-typewriter {
+    font-size: 3.5vw;
+  }
+}
+/* Extra-large desktops */
+@media (min-width: 1281px) {
+  .h2-typewriter {
+    font-size: 48px; /* Back to default or set a fixed size */
+  }
+}
 @keyframes restart-delay {
   0% { opacity: 1; }
   100% { opacity: 1; }
@@ -5125,11 +5158,20 @@ body.dark-theme .bostami-header-area {
 
 /* Hide MobileView by default */
 .mobile-view {
-  /* display:contents; */
-  display: none;
+  display: none; /* Hide by default */
 }
 
-/* Show MobileView when screen width is less   than or equal to 768px or equal to 1080px */
+/* Show MobileView when screen width is between 600px and 1280px (including tablets and laptops with 1280x800 resolution) */
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+  .mobile-view {
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* Additionally, show MobileView for smaller screens (up to 768px) or specific 1080px width screens */
 @media only screen and (max-width: 768px), only screen and (min-width: 1080px) and (max-width: 1080px) {
   .mobile-view {
     display: flex;
@@ -5138,8 +5180,6 @@ body.dark-theme .bostami-header-area {
     padding: 10px;
   }
 }
-/* Ensures that the dark mode toggle button is fixed */
-
 
 /* Ensures that SpeedDial stays fixed */
 .speed-dial {
@@ -5148,7 +5188,6 @@ body.dark-theme .bostami-header-area {
   right: 16px;
   z-index: 999; /* Ensures it stays above other elements, but below dark mode toggle */
 }
-
 
 /* about */
 @media only screen and (max-width: 768px), only screen and (min-width: 1080px) and (max-width: 1080px) {
@@ -5166,8 +5205,6 @@ body.dark-theme .bostami-header-area {
   }
 
 }
-
-
 
 .example-text {
   color: rgb(0, 0, 0); /* Default text color */
