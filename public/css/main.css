@@ -2783,11 +2783,11 @@ textarea:focus::placeholder {
   line-height: 40px;
   font-size: 18px;
 }
-.bostami-parsonal-info-social-link .facebook {
-  color: #1773ea;
+.bostami-parsonal-info-social-link .github {
+  color: #000000;
 }
-.bostami-parsonal-info-social-link .facebook:hover {
-  background: #1773ea;
+.bostami-parsonal-info-social-link .github:hover {
+  background: #010101;
   color: #fff;
 }
 .bostami-parsonal-info-social-link .twitter {

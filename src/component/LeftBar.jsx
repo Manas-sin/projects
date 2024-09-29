@@ -30,9 +30,10 @@ function LeftBar() {
             {/* socail link */}
             <ul className="bostami-parsonal-info-social-link mb-30">
               <li>
-                <a href="https://www.facebook.com/profile.php?id=100008176530103" className="facebook">
-                  <i className="fa-brands fa-facebook-f" />
-                </a>
+              <a href="https://github.com/Manas-sin" className="github">
+  <i className="fa-brands fa-github" />
+</a>
+
               </li>
               <li>
                 <a href="https://x.com/manassi63116169" className="twitter">
