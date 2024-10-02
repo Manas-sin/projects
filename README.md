@@ -106,16 +106,13 @@
 </p>
 
 <hr>
-<h3  align="left">📈 GitHub Stats</h3>
-<p align="left" style="display: flex; flex-wrap: wrap; gap: 15px;">
-  <img src="https://github-readme-stats.vercel.app/api?username=manas-sin&show_icons=true&locale=en" alt="My GitHub Stats" />
+<h3 align="left">📈 GitHub Stats</h3>
+<p align="left" style="display: flex; gap: 15px;">
+  <img src="https://github-readme-stats.vercel.app/api?username=manas-sin&show_icons=true&locale=en" alt="My GitHub Stats" width="400" height="195"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=manas-sin&show_icons=true&locale=en&layout=compact" alt="Top Languages" width="400" height="195"/>
 </p>
 
 <br>
-<p align="left" style="display: flex; flex-wrap: wrap; gap: 15px;">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=manas-sin&show_icons=true&locale=en&layout=compact" alt="Top Languages" />
-  </p>
-<br>    
 <h3  align="left">✨ Let's Build Something Great Together!</h3>
 
 
